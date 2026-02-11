@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  /* CSJT Palette - Modern & Vibrant (Restored) */
+  --color-primary-dark: #01426A;
+  --color-primary: #0067A0;
+  --color-success-dark: #007B5F;
+  --color-success: #00B388;
+  --color-warning: #FFCD00;
+  --color-warning-light: #FBDD65;
+
+  /* Base Typography - Slightly reduced from V1 (18px) to 16px for balance */
+  --font-base-size: 16px;
+}
+
+@theme inline {
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary: var(--color-primary);
+  --color-success-dark: var(--color-success-dark);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-warning-light: var(--color-warning-light);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-size: var(--font-base-size);
+  color: #1a1a1a;
+  background: #f8f9fa;
+  /* Light grey modern background */
+}
+
+/* Accessibility: High contrast focus */
+:focus-visible {
+  outline: 3px solid var(--color-warning);
+  outline-offset: 2px;
+}
