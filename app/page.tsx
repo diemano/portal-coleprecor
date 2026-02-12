@@ -5,7 +5,7 @@ import { NewsList } from "@/components/NewsList";
 
 export default function Home() {
   return (
-    <div className="space-y-16 pb-16">
+    <div className="space-y-8 pb-16">
       <HeroSection />
 
       <div className="container mx-auto px-4">

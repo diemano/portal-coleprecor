@@ -17,20 +17,20 @@ export function CalendarWidget() {
                 <h2 className="text-2xl font-bold text-[var(--color-primary-dark)]">Agenda</h2>
             </div>
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {events.map((event, index) => (
-                    <div key={index} className="group flex items-start space-x-4 cursor-pointer">
+                    <div key={index} className="group flex items-start space-x-4 cursor-pointer p-4 border border-gray-100 rounded-lg hover:shadow-md transition-all bg-white">
                         <div className="bg-[var(--color-primary)] text-white p-3 rounded-xl text-center min-w-[70px] group-hover:bg-[var(--color-primary-dark)] transition-colors shadow-md">
                             <span className="block text-2xl font-bold leading-none">{event.day}</span>
                             <span className="block text-xs font-medium opacity-80 mt-1">{event.month}</span>
                         </div>
                         <div>
-                            <h3 className="font-bold text-gray-800 text-lg leading-tight group-hover:text-[var(--color-primary)] transition-colors">
+                            <h3 className="font-bold text-gray-800 text-lg leading-tight group-hover:text-[var(--color-primary)] transition-colors line-clamp-2">
                                 {event.title}
                             </h3>
                             <div className="flex items-center text-sm text-gray-500 mt-2">
                                 <MapPin className="w-4 h-4 mr-1 text-[var(--color-success)]" />
-                                {event.location}
+                                <span className="truncate">{event.location}</span>
                             </div>
                         </div>
                     </div>

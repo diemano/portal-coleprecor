@@ -11,9 +11,9 @@ export function NewsList() {
             <h2 className="text-2xl font-bold text-[var(--color-primary-dark)] mb-6 pb-2 border-b border-gray-100">
                 Últimas Notícias
             </h2>
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {news.map((item, index) => (
-                    <article key={index} className="group cursor-pointer">
+                    <article key={index} className="group cursor-pointer border border-gray-100 p-4 rounded-lg hover:shadow-md transition-shadow">
                         <span className="text-xs font-semibold text-[var(--color-primary)] uppercase tracking-wider">
                             {item.category} • {item.date}
                         </span>
