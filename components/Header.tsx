@@ -14,7 +14,7 @@ export function Header() {
                             alt="Portal Coleprecor"
                             width={200}
                             height={50}
-                            className="h-10 w-auto object-contain"
+                            className="h-[60px] w-auto object-contain"
                             priority
                         />
                     </Link>

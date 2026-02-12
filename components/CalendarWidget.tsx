@@ -6,6 +6,8 @@ export function CalendarWidget() {
         { day: "22", month: "MAR", title: "Encontro de Corregedores", location: "São Paulo - SP" },
         { day: "10", month: "ABR", title: "Webinário sobre Acessibilidade", location: "Online" },
         { day: "26", month: "MAI", title: "2ª Reunião Ordinária", location: "Curitiba - PR" },
+        { day: "15", month: "JUN", title: "Simpósio de Tecnologia Jurídica", location: "Rio de Janeiro - RJ" },
+        { day: "05", month: "JUL", title: "3ª Reunião Ordinária", location: "Belo Horizonte - MG" },
     ];
 
     return (

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
     return (
-        <section className="bg-white py-12">
+        <section className="bg-white py-6">
             <div className="container mx-auto px-4">
                 {/* Removed "Destaque" Title */}
 
