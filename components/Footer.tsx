@@ -36,7 +36,7 @@ export function Footer() {
                 <div className="border-t border-[var(--color-primary)] pt-8 mt-8 text-center text-sm text-gray-300">
                     <p>&copy; {new Date().getFullYear()} Coleprecor. Todos os direitos reservados.</p>
                     <div className="mt-2 text-xs">
-                        Design alinhado à identidade visual da <span className="font-semibold text-white">Justiça do Trabalho</span>.
+                        <span className="font-semibold text-white">Justiça do Trabalho</span>.
                     </div>
                 </div>
             </div>
