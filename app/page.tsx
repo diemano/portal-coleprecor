@@ -9,20 +9,18 @@ export default function Home() {
       <HeroSection />
 
       <div className="container mx-auto px-4">
+        {/* Main Content Area - Full Width for News now that Calendar is moved */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Main Content Area */}
-          <div className="lg:col-span-2 space-y-12">
+          <div className="lg:col-span-3 space-y-12">
             <NewsList />
-            {/* Banner Publicidade ou Destaque Secundário */}
-            <div className="bg-gray-100 rounded-xl p-8 text-center text-gray-400 border-2 border-dashed border-gray-300">
-              Espaço para Banner / Publicidade
-            </div>
           </div>
+        </div>
+      </div>
 
-          {/* Sidebar Area */}
-          <div className="lg:col-span-1">
-            <CalendarWidget />
-          </div>
+      {/* Calendar Section - Moved below as requested */}
+      <div className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <CalendarWidget />
         </div>
       </div>
 

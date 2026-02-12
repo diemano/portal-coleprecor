@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, Search } from "lucide-react";
 
 export function Header() {
@@ -7,13 +8,20 @@ export function Header() {
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
                 {/* Logo Area */}
                 <div className="flex items-center space-x-4">
-                    <Link href="/" className="text-2xl font-bold tracking-tight hover:opacity-90 transition-opacity">
-                        Portal Coleprecor
+                    <Link href="/" className="hover:opacity-90 transition-opacity">
+                        <Image
+                            src="https://www.justicanossotrabalho.com.br/wp-content/uploads/2023/12/logo-3.png"
+                            alt="Portal Coleprecor"
+                            width={200}
+                            height={50}
+                            className="h-10 w-auto object-contain"
+                            priority
+                        />
                     </Link>
                 </div>
 
-                {/* Desktop Navigation - Adjusted font size from text-lg (V1) to text-base (Requested) */}
-                <nav className="hidden md:flex items-center space-x-6">
+                {/* Desktop Navigation - Right Aligned (ml-auto) */}
+                <nav className="hidden md:flex items-center space-x-6 ml-auto mr-8">
                     {[
                         { name: "Início", href: "/" },
                         { name: "Notícias", href: "/noticias" },

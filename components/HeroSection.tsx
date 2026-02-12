@@ -1,18 +1,24 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
     return (
         <section className="bg-white py-12">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-[var(--color-primary-dark)] mb-8 border-l-4 border-[var(--color-warning)] pl-4">
-                    Destaque
-                </h2>
+                {/* Removed "Destaque" Title */}
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    {/* Image Placeholder */}
-                    <div className="aspect-video bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] rounded-xl shadow-2xl flex items-center justify-center text-white/50 relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
-                        <span className="text-lg font-medium">Imagem da Notícia Principal</span>
+                    {/* Image - Updated URL */}
+                    <div className="aspect-video relative rounded-xl shadow-2xl overflow-hidden group">
+                        <Image
+                            src="https://www.justicanossotrabalho.com.br/wp-content/uploads/2026/02/In%C3%ADcio-do-Ano-Judici%C3%A1rio-no-STF.png"
+                            alt="Início do Ano Judiciário no STF"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            priority
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                     </div>
 
                     {/* Content */}
