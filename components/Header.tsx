@@ -59,8 +59,8 @@ export function Header() {
             </div>
 
             {/* Description Bar */}
-            <div className="bg-[#1e293b] py-2 text-center border-t border-white/10">
-                <p className="text-xs md:text-sm font-medium text-gray-300 px-4 uppercase tracking-wide">
+            <div className="bg-[#1e293b] py-0.5 text-center border-t border-white/10">
+                <p className="text-[9px] md:text-[10px] font-medium text-gray-300 px-4 uppercase tracking-wide">
                     Colégio de Presidentes(as) e Corregedores(as) dos Tribunais Regionais do Trabalho
                 </p>
             </div>
