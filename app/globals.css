@@ -10,8 +10,9 @@
   --color-warning-light: #FBDD65;
 
   /* Base Typography - Increased to 18px for better readability */
-  --font-base-size: 18px;
-  font-size: var(--font-base-size); /* Applies to root, scaling all rem units */
+  --font-base-size: 17px;
+  font-size: var(--font-base-size);
+  /* Applies to root, scaling all rem units */
 }
 
 @theme inline {
