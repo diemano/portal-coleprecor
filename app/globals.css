@@ -9,8 +9,9 @@
   --color-warning: #FFCD00;
   --color-warning-light: #FBDD65;
 
-  /* Base Typography - Slightly reduced from V1 (18px) to 16px for balance */
-  --font-base-size: 16px;
+  /* Base Typography - Increased to 18px for better readability */
+  --font-base-size: 18px;
+  font-size: var(--font-base-size); /* Applies to root, scaling all rem units */
 }
 
 @theme inline {
@@ -25,7 +26,7 @@
 }
 
 body {
-  font-size: var(--font-base-size);
+  /* font-size inherited from root */
   color: #1a1a1a;
   background: #f8f9fa;
   /* Light grey modern background */
