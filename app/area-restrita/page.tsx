@@ -99,7 +99,7 @@ export default function AreaRestrita() {
                                         </p>
                                     </div>
                                     <div className="mt-8 flex items-center text-[var(--color-primary)] font-semibold text-sm opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                                        Acessar plataforma <ArrowRight className="w-4 h-4 ml-1" />
+                                        Acessar <ArrowRight className="w-4 h-4 ml-1" />
                                     </div>
                                 </div>
                             </Link>

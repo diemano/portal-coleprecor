@@ -8,7 +8,7 @@ const noticias = [
         resumo: "Iniciativa promovida em parceria com a Enamat visa fomentar a presença feminina em cargos de gestão no Judiciário; aulas presenciais acontecerão em abril...",
         data: "06/03/2026",
         categoria: "Destaque",
-        imagem: "https://www.justicanossotrabalho.com.br/wp-content/themes/dfd-native/assets/images/no_image_resized_675-450.jpg",
+        imagem: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800",
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ const noticias = [
         resumo: "A presidente do Colégio de Presidentes e Corregedores dos Tribunais Regionais do Trabalho (Coleprecor), desembargadora Herminegilda Leite Machado, participou...",
         data: "20/02/2026",
         categoria: "Notícias",
-        imagem: "https://www.justicanossotrabalho.com.br/wp-content/themes/dfd-native/assets/images/no_image_resized_675-450.jpg",
+        imagem: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const noticias = [
         resumo: "Presidente Herminegilda Leite Machado e secretário-geral Jasiel Ivo acompanharam as diretrizes traçadas pelas cúpulas do Judiciário, com foco na ética...",
         data: "20/02/2026",
         categoria: "Notícias",
-        imagem: "https://www.justicanossotrabalho.com.br/wp-content/themes/dfd-native/assets/images/no_image_resized_675-450.jpg",
+        imagem: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800",
     },
     {
         id: 4,
@@ -40,7 +40,7 @@ const noticias = [
         resumo: "O vice-presidente do Tribunal Superior do Trabalho (TST), ministro Guilherme Augusto Caputo Bastos, afirmou nesta quinta-feira (27/11), durante a 9ª reunião...",
         data: "20/02/2026",
         categoria: "Notícias",
-        imagem: "https://www.justicanossotrabalho.com.br/wp-content/themes/dfd-native/assets/images/no_image_resized_675-450.jpg",
+        imagem: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800",
     },
     {
         id: 6,
