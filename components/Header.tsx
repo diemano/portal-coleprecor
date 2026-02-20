@@ -12,7 +12,7 @@ const menuItems = [
         href: null,
         submenu: [
             { name: "Notícias", href: "/noticias" },
-            { name: "Álbum de Fotos", href: "/albuns-de-fotos" },
+            { name: "Álbum de Fotos", href: null },
         ],
     },
     {
@@ -24,8 +24,8 @@ const menuItems = [
             { name: "Relatórios das Gestões", href: "/quem-somos/relatorios" },
         ],
     },
-    { name: "A Justiça do Trabalho", href: "/justica-do-trabalho" },
-    { name: "Fale Conosco", href: "/contato" },
+    { name: "A Justiça do Trabalho", href: null },
+    { name: "Fale Conosco", href: null },
 ];
 
 export function Header() {
@@ -51,7 +51,7 @@ export function Header() {
                 </div>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden lg:flex items-center space-x-1 ml-auto mr-8">
+                <nav className="hidden lg:flex items-center space-x-1 ml-auto mr-4">
                     {menuItems.map((item) => (
                         <div
                             key={item.name}
@@ -79,25 +79,37 @@ export function Header() {
                             {/* Dropdown */}
                             {item.submenu && openDropdown === item.name && (
                                 <div className="absolute top-full left-0 mt-0 bg-white text-gray-800 rounded-lg shadow-xl border border-gray-100 min-w-[220px] py-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
-                                    {item.submenu.map((sub) => (
-                                        <Link
-                                            key={sub.href}
-                                            href={sub.href}
-                                            className="block px-4 py-2.5 text-sm hover:bg-gray-50 hover:text-[var(--color-primary)] transition-colors"
-                                        >
-                                            {sub.name}
-                                        </Link>
-                                    ))}
+                                    {item.submenu.map((sub, idx) =>
+                                        sub.href ? (
+                                            <Link
+                                                key={idx}
+                                                href={sub.href}
+                                                className="block px-4 py-2.5 text-sm hover:bg-gray-50 hover:text-[var(--color-primary)] transition-colors"
+                                            >
+                                                {sub.name}
+                                            </Link>
+                                        ) : (
+                                            <span
+                                                key={idx}
+                                                className="block px-4 py-2.5 text-sm text-gray-400 cursor-default"
+                                            >
+                                                {sub.name}
+                                            </span>
+                                        )
+                                    )}
                                 </div>
                             )}
                         </div>
                     ))}
 
-                    {/* Área Restrita */}
-                    <span className="flex items-center gap-1.5 text-sm font-medium text-white/60 rounded px-3 py-2 cursor-default select-none">
+                    {/* Área Restrita - Button */}
+                    <Link
+                        href="/area-restrita"
+                        className="flex items-center gap-1.5 text-sm font-medium bg-[var(--color-warning)] text-[var(--color-primary-dark)] rounded-lg px-4 py-2 hover:brightness-110 transition-all ml-2"
+                    >
                         <Lock className="w-3.5 h-3.5" />
                         Área Restrita
-                    </span>
+                    </Link>
                 </nav>
 
                 {/* Action Icons */}
@@ -136,16 +148,25 @@ export function Header() {
                                     </button>
                                     {mobileSubmenuOpen === item.name && (
                                         <div className="bg-black/10">
-                                            {item.submenu.map((sub) => (
-                                                <Link
-                                                    key={sub.href}
-                                                    href={sub.href}
-                                                    className="block px-10 py-2.5 text-sm hover:bg-white/10 transition-colors"
-                                                    onClick={() => setMobileMenuOpen(false)}
-                                                >
-                                                    {sub.name}
-                                                </Link>
-                                            ))}
+                                            {item.submenu.map((sub, idx) =>
+                                                sub.href ? (
+                                                    <Link
+                                                        key={idx}
+                                                        href={sub.href}
+                                                        className="block px-10 py-2.5 text-sm hover:bg-white/10 transition-colors"
+                                                        onClick={() => setMobileMenuOpen(false)}
+                                                    >
+                                                        {sub.name}
+                                                    </Link>
+                                                ) : (
+                                                    <span
+                                                        key={idx}
+                                                        className="block px-10 py-2.5 text-sm text-white/40"
+                                                    >
+                                                        {sub.name}
+                                                    </span>
+                                                )
+                                            )}
                                         </div>
                                     )}
                                 </>
@@ -157,14 +178,22 @@ export function Header() {
                                 >
                                     {item.name}
                                 </Link>
-                            ) : null}
+                            ) : (
+                                <span className="block px-6 py-3 text-sm font-medium text-white/40">
+                                    {item.name}
+                                </span>
+                            )}
                         </div>
                     ))}
                     {/* Mobile Área Restrita */}
-                    <div className="px-6 py-3 text-sm font-medium text-white/60 flex items-center gap-2">
-                        <Lock className="w-3.5 h-3.5" />
+                    <Link
+                        href="/area-restrita"
+                        className="mx-6 mt-3 flex items-center justify-center gap-2 bg-[var(--color-warning)] text-[var(--color-primary-dark)] rounded-lg px-4 py-3 text-sm font-bold"
+                        onClick={() => setMobileMenuOpen(false)}
+                    >
+                        <Lock className="w-4 h-4" />
                         Área Restrita
-                    </div>
+                    </Link>
                 </div>
             )}
 
