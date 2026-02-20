@@ -5,7 +5,7 @@ const mesaDiretora = [
     {
         cargo: "Vice-Presidente do Coleprecor",
         nome: "Desembargador Alvaro Luiz Carvalho Moreira",
-        foto: "https://www.justicanossotrabalho.com.br/wp-content/uploads/2025/12/Des.-Alvaro-Luiz-Carvalho-Moreira-300x300.jpg",
+        foto: "https://www.justicanossotrabalho.com.br/wp-content/uploads/2025/12/Alvaro-Luiz-Carvalho-Moreira-184x254.jpeg",
     },
     {
         cargo: "Presidente do Coleprecor",
@@ -15,7 +15,7 @@ const mesaDiretora = [
     {
         cargo: "Secretário-Geral do Coleprecor",
         nome: "Desembargador Jasiel Ivo",
-        foto: "https://www.justicanossotrabalho.com.br/wp-content/uploads/2025/12/Des.-Jasiel-Ivo-300x300.jpg",
+        foto: "https://www.justicanossotrabalho.com.br/wp-content/uploads/2025/12/DSC04103-ok-184x254.jpg",
     },
 ];
 
@@ -130,8 +130,8 @@ export default function Composicao() {
                                 {membro.cargo}
                             </p>
                             <div className={`relative overflow-hidden border-4 shadow-lg mb-4 ${index === 1
-                                    ? "w-40 h-40 rounded-2xl border-[var(--color-warning)]"
-                                    : "w-32 h-32 rounded-2xl border-gray-200"
+                                ? "w-40 h-40 rounded-2xl border-[var(--color-warning)]"
+                                : "w-32 h-32 rounded-2xl border-gray-200"
                                 }`}>
                                 <Image
                                     src={membro.foto}
