@@ -1,6 +1,12 @@
 export function NewsList() {
     const news = [
         {
+            date: "19/02",
+            title: "Nova diretoria do Coleprecor apresenta diretrizes em reunião com o ministro Edson Fachin",
+            category: "Destaque",
+            description: "A nova mesa diretora fez uma visita institucional ao presidente do STF e do CNJ para apresentar as diretrizes para 2025-2026 e defender a competência da Justiça do Trabalho."
+        },
+        {
             date: "10/02",
             title: "CSJT aprova novos provimentos para celeridade processual",
             category: "Institucional",
@@ -11,12 +17,6 @@ export function NewsList() {
             title: "Presidente do Coleprecor visita TRT da 18ª Região",
             category: "Visitas",
             description: "Encontro teve como objetivo alinhar estratégias de gestão e compartilhar boas práticas entre os tribunais."
-        },
-        {
-            date: "08/02",
-            title: "Nota de Pesar: Falecimento do Desembargador X",
-            category: "Comunicado",
-            description: "O Coleprecor manifesta profundo pesar pelo falecimento do ilustre magistrado, que dedicou sua vida à justiça."
         },
     ];
 
