@@ -1,4 +1,4 @@
-import { FileText, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const relatorios = [
     {
@@ -52,13 +52,10 @@ export default function Relatorios() {
     return (
         <div className="bg-gray-50 min-h-screen">
             {/* Page Header */}
-            <div className="bg-[var(--color-primary-dark)] text-white py-12">
+            <div className="bg-white border-b border-gray-200 py-10">
                 <div className="container mx-auto px-4">
-                    <div className="flex items-center gap-3 mb-2">
-                        <FileText className="w-8 h-8 text-[var(--color-warning)]" />
-                        <h1 className="text-3xl md:text-4xl font-bold">Relatórios das Gestões</h1>
-                    </div>
-                    <p className="text-gray-300 text-lg">
+                    <h1 className="text-3xl md:text-4xl font-bold text-[var(--color-primary-dark)]">Relatórios das Gestões</h1>
+                    <p className="text-gray-500 text-lg mt-1">
                         Consulte os relatórios de atividades das gestões do Coleprecor.
                     </p>
                 </div>

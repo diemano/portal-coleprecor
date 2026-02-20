@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, Search, ChevronDown } from "lucide-react";
+import { Menu, Search, ChevronDown, Lock } from "lucide-react";
 import { useState } from "react";
 
 const menuItems = [
     { name: "Home", href: "/" },
     {
         name: "Imprensa",
-        href: "#",
+        href: null,
         submenu: [
             { name: "Notícias", href: "/noticias" },
             { name: "Álbum de Fotos", href: "/albuns-de-fotos" },
@@ -17,7 +17,7 @@ const menuItems = [
     },
     {
         name: "Quem Somos",
-        href: null, // Not clickable
+        href: null,
         submenu: [
             { name: "Galeria Presidentes", href: "/quem-somos/galeria-presidentes" },
             { name: "Composição", href: "/quem-somos/composicao" },
@@ -83,7 +83,7 @@ export function Header() {
                                         <Link
                                             key={sub.href}
                                             href={sub.href}
-                                            className="block px-4 py-2.5 text-sm hover:bg-[var(--color-primary-light,#e8f4fd)] hover:text-[var(--color-primary)] transition-colors"
+                                            className="block px-4 py-2.5 text-sm hover:bg-gray-50 hover:text-[var(--color-primary)] transition-colors"
                                         >
                                             {sub.name}
                                         </Link>
@@ -92,6 +92,12 @@ export function Header() {
                             )}
                         </div>
                     ))}
+
+                    {/* Área Restrita */}
+                    <span className="flex items-center gap-1.5 text-sm font-medium text-white/60 rounded px-3 py-2 cursor-default select-none">
+                        <Lock className="w-3.5 h-3.5" />
+                        Área Restrita
+                    </span>
                 </nav>
 
                 {/* Action Icons */}
@@ -154,6 +160,11 @@ export function Header() {
                             ) : null}
                         </div>
                     ))}
+                    {/* Mobile Área Restrita */}
+                    <div className="px-6 py-3 text-sm font-medium text-white/60 flex items-center gap-2">
+                        <Lock className="w-3.5 h-3.5" />
+                        Área Restrita
+                    </div>
                 </div>
             )}
 

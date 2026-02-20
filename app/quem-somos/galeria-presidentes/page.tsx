@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Crown } from "lucide-react";
 
 const presidentes = [
     { numero: "Atual", nome: "Herminegilda Leite Machado", trt: "TRT da 13ª Região/PB", posse: "Novembro/2025", foto: "https://www.justicanossotrabalho.com.br/wp-content/uploads/2025/12/Desa.-Herminegilda-Leite-Machado-300x300.jpg" },
@@ -48,14 +47,13 @@ export default function GaleriaPresidentes() {
 
     return (
         <div className="bg-gray-50 min-h-screen">
-            {/* Page Header */}
-            <div className="bg-[var(--color-primary-dark)] text-white py-12">
+            {/* Page Header - Clean, no blue bg, no icon */}
+            <div className="bg-white border-b border-gray-200 py-10">
                 <div className="container mx-auto px-4">
-                    <div className="flex items-center gap-3 mb-2">
-                        <Crown className="w-8 h-8 text-[var(--color-warning)]" />
-                        <h1 className="text-3xl md:text-4xl font-bold">Galeria de Presidentes</h1>
-                    </div>
-                    <p className="text-gray-300 text-lg">
+                    <h1 className="text-3xl md:text-4xl font-bold text-[var(--color-primary-dark)]">
+                        Galeria de Presidentes
+                    </h1>
+                    <p className="text-gray-500 text-lg mt-1">
                         Conheça os presidentes que lideraram o Coleprecor ao longo de sua história.
                     </p>
                 </div>
