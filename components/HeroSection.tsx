@@ -12,8 +12,8 @@ export function HeroSection() {
                     {/* Image - Updated URL */}
                     <div className="aspect-video relative rounded-xl shadow-2xl overflow-hidden group">
                         <Image
-                            src="https://www.justicanossotrabalho.com.br/wp-content/uploads/2026/02/In%C3%ADcio-do-Ano-Judici%C3%A1rio-no-STF.png"
-                            alt="Início do Ano Judiciário no STF"
+                            src="https://www.justicanossotrabalho.com.br/wp-content/uploads/2026/02/Coleprecor-visita-STF-1.jpg"
+                            alt="Nova diretoria do Coleprecor em reunião com o ministro Edson Fachin"
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-105"
                             priority
@@ -24,19 +24,19 @@ export function HeroSection() {
                     {/* Content */}
                     <div className="space-y-6">
                         <span className="inline-block px-4 py-1 bg-[var(--color-warning)] text-[var(--color-primary-dark)] text-sm font-bold rounded-full shadow-sm">
-                            Coleprecor
+                            Destaque
                         </span>
                         <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-primary-dark)] leading-tight">
-                            Reunião Ordinária define novas diretrizes para 2026
+                            Nova diretoria do Coleprecor apresenta diretrizes em reunião com o ministro Edson Fachin
                         </h1>
                         <p className="text-lg text-gray-600 leading-relaxed">
-                            O Colégio de Presidentes e Corregedores dos Tribunais Regionais do Trabalho debateu temas cruciais para a justiça trabalhista na última sessão.
+                            A nova mesa diretora fez uma visita institucional ao presidente do Supremo Tribunal Federal (STF) e do Conselho Nacional de Justiça (CNJ), para apresentar as diretrizes para 2025-2026 e defender a competência da Justiça do Trabalho.
                         </p>
                         <Link
-                            href="/noticia-destaque"
+                            href="/noticias"
                             className="inline-flex items-center px-6 py-3 bg-[var(--color-primary)] text-white font-semibold rounded-lg hover:bg-[var(--color-primary-dark)] transition-all shadow-md hover:shadow-lg"
                         >
-                            Ler notícia completa
+                            Ver notícias
                             <ArrowRight className="ml-2 w-5 h-5" />
                         </Link>
                     </div>
