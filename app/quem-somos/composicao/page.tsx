@@ -1,4 +1,13 @@
+import Image from "next/image";
 import { Users } from "lucide-react";
+
+const mesaDiretora = {
+    gestao: "2025/2026",
+    membros: [
+        { cargo: "Presidente", nome: "Des. Herminegilda Leite Machado", trt: "TRT da 8ª Região/PA-AP", foto: "https://www.justicanossotrabalho.com.br/wp-content/uploads/2025/12/Desa.-Herminegilda-Leite-Machado-300x300.jpg" },
+        { cargo: "Vice-Presidente", nome: "Des. Adenir Alves da Silva Carruesco", trt: "TRT da 23ª Região/MT", foto: "https://www.justicanossotrabalho.com.br/wp-content/uploads/2025/01/Desa-Adenir-Carruesco-1-300x300.jpg" },
+    ],
+};
 
 const presidentes = [
     { trt: "TRT da 1ª Região (RJ)", nome: "Des. Milton Gouveia" },
@@ -54,40 +63,30 @@ const corregedores = [
     { trt: "TRT da 24ª Região (MS)", nome: "Des. Amaury Rodrigues Pinto Júnior" },
 ];
 
+function MemberCard({ nome, trt }: { nome: string; trt: string }) {
+    return (
+        <div className="bg-white rounded-xl border border-gray-100 p-4 hover:shadow-md transition-shadow group flex items-center gap-4">
+            <div className="relative w-12 h-12 rounded-full bg-gray-200 border-2 border-gray-100 group-hover:border-[var(--color-primary)] transition-colors shrink-0 flex items-center justify-center overflow-hidden">
+                <span className="text-gray-400 text-lg font-bold">{nome.split(" ").pop()?.[0]}</span>
+            </div>
+            <div className="min-w-0">
+                <h4 className="font-semibold text-gray-800 text-sm leading-tight">{nome}</h4>
+                <p className="text-xs text-gray-500 mt-0.5">{trt}</p>
+            </div>
+        </div>
+    );
+}
+
 function MemberTable({ title, members }: { title: string; members: { trt: string; nome: string }[] }) {
     return (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-            <h3 className="text-xl font-bold text-white bg-[var(--color-primary)] px-6 py-4">
+        <div>
+            <h3 className="text-xl font-bold text-[var(--color-primary-dark)] mb-6 pb-3 border-b border-gray-200">
                 {title}
             </h3>
-            <div className="overflow-x-auto">
-                <table className="w-full">
-                    <thead>
-                        <tr className="border-b border-gray-100">
-                            <th className="text-left px-6 py-3 text-sm font-semibold text-gray-500 uppercase tracking-wider">
-                                Tribunal
-                            </th>
-                            <th className="text-left px-6 py-3 text-sm font-semibold text-gray-500 uppercase tracking-wider">
-                                Nome
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {members.map((member, index) => (
-                            <tr
-                                key={index}
-                                className="border-b border-gray-50 hover:bg-gray-50 transition-colors"
-                            >
-                                <td className="px-6 py-3 text-sm text-gray-600 font-medium">
-                                    {member.trt}
-                                </td>
-                                <td className="px-6 py-3 text-sm text-gray-800 font-semibold">
-                                    {member.nome}
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {members.map((member, index) => (
+                    <MemberCard key={index} nome={member.nome} trt={member.trt} />
+                ))}
             </div>
         </div>
     );
@@ -109,10 +108,41 @@ export default function Composicao() {
                 </div>
             </div>
 
-            {/* Content */}
-            <div className="container mx-auto px-4 py-12 space-y-12">
-                <MemberTable title="Presidentes" members={presidentes} />
-                <MemberTable title="Corregedores" members={corregedores} />
+            {/* Mesa Diretora - Featured */}
+            <div className="container mx-auto px-4 py-12">
+                <h2 className="text-2xl font-bold text-[var(--color-primary-dark)] mb-8 pb-3 border-b border-gray-200">
+                    Mesa Diretora — Gestão {mesaDiretora.gestao}
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+                    {mesaDiretora.membros.map((membro, index) => (
+                        <div
+                            key={index}
+                            className="bg-gradient-to-br from-[var(--color-primary-dark)] to-[var(--color-primary)] text-white rounded-2xl p-6 shadow-lg flex items-center gap-6"
+                        >
+                            <div className="relative w-24 h-24 rounded-full overflow-hidden border-3 border-[var(--color-warning)] shadow-md shrink-0">
+                                <Image
+                                    src={membro.foto}
+                                    alt={membro.nome}
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                            <div>
+                                <span className="inline-block px-3 py-0.5 bg-[var(--color-warning)] text-[var(--color-primary-dark)] text-xs font-bold rounded-full mb-2">
+                                    {membro.cargo}
+                                </span>
+                                <h3 className="text-lg font-bold">{membro.nome}</h3>
+                                <p className="text-white/70 text-sm">{membro.trt}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Members Tables */}
+                <div className="space-y-16">
+                    <MemberTable title="Presidentes dos TRTs" members={presidentes} />
+                    <MemberTable title="Corregedores dos TRTs" members={corregedores} />
+                </div>
             </div>
         </div>
     );
