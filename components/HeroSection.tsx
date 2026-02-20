@@ -26,7 +26,7 @@ export function HeroSection() {
                         <span className="inline-block px-4 py-1 bg-[var(--color-warning)] text-[var(--color-primary-dark)] text-sm font-bold rounded-full shadow-sm">
                             Destaque
                         </span>
-                        <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-primary-dark)] leading-tight">
+                        <h1 className="text-[2.5rem] font-bold text-[var(--color-primary-dark)] leading-tight">
                             Nova diretoria do Coleprecor apresenta diretrizes em reunião com o ministro Edson Fachin
                         </h1>
                         <p className="text-lg text-gray-600 leading-relaxed">
